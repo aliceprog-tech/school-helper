@@ -1,0 +1,58 @@
+html
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Помощник школьника</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body class="light">
+
+        <header>
+            <h1>🤝 Помощник школьника</h1>
+            <nav>
+                <button class="nav-btn active" onclick="showSection('schedule', this)"><i class="fa-solid fa-calendar-days"></i> Расписание</button>
+                <button class="nav-btn" onclick="showSection('homework', this)"><i class="fa-solid fa-pencil"></i> Домашка</button>
+                <button class="nav-btn" onclick="showSection('timer', this)"><i class="fa-solid fa-stopwatch"></i> Таймер</button>
+                <button id="themeToggle">🌙 Тёмная тема</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Расписание -->
+            <section id="schedule" class="section">
+                <h2><i class="fa-solid fa-calendar-days"></i> Расписание уроков</h2>
+                <ul>
+                    <li><i class="fa-solid fa-book"></i> Понедельник — Математика, Русский</li>
+                    <li><i class="fa-solid fa-book"></i> Вторник — Английский, История</li>
+                    <li><i class="fa-solid fa-book"></i> Среда — Физика, Информатика</li>
+                </ul>
+            </section>
+
+            <!-- Домашние задания -->
+            <section id="homework" class="section hidden">
+                <h2><i class="fa-solid fa-pencil"></i> Домашние задания</h2>
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Введите задание">
+                    <button onclick="addTask()"><i class="fa-solid fa-plus"></i> Добавить</button>
+                </div>
+                <ul id="taskList"></ul>
+            </section>
+
+            <!-- Таймер -->
+            <section id="timer" class="section hidden">
+                <h2><i class="fa-solid fa-stopwatch"></i> Таймер учёбы (25 минут)</h2>
+                <p id="time">25:00</p>
+                <div class="timer-buttons">
+                    <button onclick="startTimer()"><i class="fa-solid fa-play"></i> Старт</button>
+                    <button onclick="resetTimer()"><i class="fa-solid fa-rotate-left"></i> Сброс</button>
+                </div>
+            </section>
+        </main>
+
+    <script src="js/script.js"></script>
+    </body>
+</html>
