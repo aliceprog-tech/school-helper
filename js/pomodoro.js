@@ -1,3 +1,4 @@
+console.log("Pomodoro JS загружен");
 let studyTime = 25 * 60;   // 25 минут
 let breakTime = 5 * 60;   // 5 минут
 
