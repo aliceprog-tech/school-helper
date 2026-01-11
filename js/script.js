@@ -1,6 +1,4 @@
-js
-
-// Переключение разделов и подсветка активного
+// разделы
 function showSection(id, btn) {
     document.querySelectorAll('.section').forEach(section => {
         section.classList.add('hidden');
@@ -11,7 +9,7 @@ function showSection(id, btn) {
     if(btn) btn.classList.add('active');
 }
 
-// Домашние задания
+// дз
 const taskList = document.getElementById("taskList");
 
 function addTask() {
@@ -21,7 +19,6 @@ function addTask() {
     const li = document.createElement("li");
     li.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${input.value}`;
 
-    // Клик для удаления с анимацией
     li.addEventListener("click", () => {
         li.style.transform = "translateX(100%)";
         li.style.opacity = "0";
@@ -63,7 +60,7 @@ function loadTasks() {
 
 loadTasks();
 
-// Таймер
+// таймер
 let time = 1500;
 let timer;
 
@@ -90,7 +87,7 @@ function updateTime() {
         `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
-// Переключение темы
+// темы свитч
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
