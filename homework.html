@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание</title>
+    <!-- SEO -->
+    <meta name="description" content="Домашние задания">
+    <meta name="keywords" content="домашка, задания, школа">
+  
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <a href="index.html">← На главную</a>
+    </header>
+    <section class="content">
+      <h2 class="content__title">Домашние задания</h2>
+      <div class="content__card">
+        <ul class="homework">
+          <li class="homework__item">Математика — №123</li>
+          <li class="homework__item">Русский — упражнение 45</li>
+          <li class="homework__item">История — параграф 10</li>
+        </ul>
+      
+        <button class="button--primary" onclick="markDone()">
+        Отметить выполненным
+        </button>
+      </div>
+    </section>
+  
+  <script>
+  function markDone() {
+    alert("Домашнее задание отмечено как выполненное");
+  }
+  </script>
+  
+  </body>
+</html>
