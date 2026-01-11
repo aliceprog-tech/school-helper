@@ -75,3 +75,17 @@ button {
   flex-direction: column;
   gap: 12px;
 }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #sidebar {
+    width: 100%;
+  }
+
+  .content__card {
+    margin: 10px;
+  }
+}
