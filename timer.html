@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Таймер</title>
-
-  <meta name="description" content="Учебный таймер">
-  <meta name="keywords" content="таймер, учеба, школа">
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <button id="menuBtn">☰</button>
-  <button id="themeBtn">🌙</button>
-</header>
-
-<nav id="sidebar" class="sidebar">
-  <a href="index.html">Главная</a>
-  <a href="schedule.html">Расписание</a>
-  <a href="homework.html">Домашка</a>
-  <a href="grades.html">Оценки</a>
-  <a href="timer.html">Таймер</a>
-</nav>
-
-<div class="content__card">
-  <h2>Учебный таймер</h2>
-  <p id="time">25:00</p>
-
-  <button onclick="start()">Старт</button>
-  <button onclick="reset()">Сброс</button>
-
-  <br><br>
-  <a href="index.html">← На главную</a>
-</div>
-
-<!-- JS ПОДКЛЮЧАЕМ ТОЛЬКО ТАК -->
+  <head>
+    <meta charset="UTF-8">
+    <title>Таймер</title>
+    <meta name="description" content="Учебный таймер">
+    <meta name="keywords" content="таймер, учеба, школа">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <button id="menuBtn">☰</button>
+      <button id="themeBtn">🌙</button>
+    </header>
+      <nav id="sidebar" class="sidebar">
+        <a href="index.html">Главная</a>
+        <a href="schedule.html">Расписание</a>
+        <a href="homework.html">Домашка</a>
+        <a href="grades.html">Оценки</a>
+        <a href="timer.html">Таймер</a>
+      </nav>
+      
+      <div class="content__card">
+        <h2>Учебный таймер</h2>
+        <p id="time">25:00</p>
+      
+        <button onclick="start()">Старт</button>
+        <button onclick="reset()">Сброс</button>
+        
+        <br><br>
+        <a href="index.html">← На главную</a>
+      </div>
+  </body>
+</html>
 <script src="js/main.js"></script>
 <script src="js/timer.js"></script>
-
-</body>
-</html>
