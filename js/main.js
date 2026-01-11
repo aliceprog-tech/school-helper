@@ -8,7 +8,6 @@ menuBtn.onclick = () => {
 
 themeBtn.onclick = () => {
   document.body.classList.toggle("dark");
-
   localStorage.setItem(
     "theme",
     document.body.classList.contains("dark") ? "dark" : "light"
