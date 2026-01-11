@@ -64,7 +64,7 @@ button {
   margin: 12px 0;
 }
 
-.card {
+.content__card {
   background: var(--card);
   margin: 20px;
   padding: 16px;
