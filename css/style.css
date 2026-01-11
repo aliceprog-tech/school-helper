@@ -18,11 +18,6 @@ body {
   color: var(--text);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 header {
   background: var(--card);
   padding: 10px 16px;
@@ -32,22 +27,26 @@ header {
 }
 
 button {
-  padding: 8px 12px;
   background: var(--accent);
   color: white;
   border: none;
+  padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-#menuBtn {
-  font-size: 20px;
+.content__card {
+  background: var(--card);
+  margin: 20px;
+  padding: 16px;
+  border-radius: 10px;
 }
 
+/* ===== SIDEBAR ===== */
 #sidebar {
   position: fixed;
-  top: 0;
   left: -260px;
+  top: 0;
   width: 250px;
   height: 100%;
   background: var(--card);
@@ -59,32 +58,19 @@ button {
   left: 0;
 }
 
-#sidebar a {
-  display: block;
-  margin: 12px 0;
-}
-
-.content__card {
-  background: var(--card);
-  margin: 20px;
-  padding: 16px;
-  border-radius: 10px;
-}
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
+/* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     gap: 10px;
   }
-
-  #sidebar {
-    width: 100%;
-  }
-
+}
   .content__card {
     margin: 10px;
   }
