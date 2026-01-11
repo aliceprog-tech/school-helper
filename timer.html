@@ -2,9 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Таймер</title>
-    <meta name="description" content="Учебный таймер">
-    <meta name="keywords" content="таймер, учеба, школа">
+    <title>Таймер Помодоро</title>
+  
+    <meta name="description" content="Учебный таймер Помодоро">
+    <meta name="keywords" content="помодоро, таймер, учеба">
+  
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,25 +14,26 @@
       <button id="menuBtn">☰</button>
       <button id="themeBtn">🌙</button>
     </header>
-      <nav id="sidebar" class="sidebar">
-        <a href="index.html">Главная</a>
-        <a href="schedule.html">Расписание</a>
-        <a href="homework.html">Домашка</a>
-        <a href="grades.html">Оценки</a>
-        <a href="timer.html">Таймер</a>
-      </nav>
-      
-      <div class="content__card">
-        <h2>Учебный таймер</h2>
-        <p id="time">25:00</p>
-      
-        <button onclick="start()">Старт</button>
-        <button onclick="reset()">Сброс</button>
-        
-        <br><br>
-        <a href="index.html">← На главную</a>
-      </div>
+    <nav id="sidebar" class="sidebar">
+      <a href="index.html">Главная</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="homework.html">Домашка</a>
+      <a href="grades.html">Оценки</a>
+      <a href="timer.html">Таймер Помодоро</a>
+    </nav>
+    <div class="content__card">
+      <h2 id="mode">Учёба</h2>
+      <p id="time">25:00</p>
+    
+      <button onclick="startPomodoro()">▶ Старт</button>
+      <button onclick="pausePomodoro()">⏸ Пауза</button>
+      <button onclick="resetPomodoro()">🔄 Сброс</button>
+    
+      <br><br>
+      <a href="index.html">← На главную</a>
+    </div>
+    
     <script src="js/main.js"></script>
-    <script src="js/timer.js"></script>
+    <script src="js/pomodoro.js"></script>
   </body>
 </html>
