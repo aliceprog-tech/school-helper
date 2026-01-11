@@ -70,3 +70,8 @@ button {
   padding: 16px;
   border-radius: 10px;
 }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
