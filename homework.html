@@ -22,17 +22,42 @@
           <li class="homework__item">История — параграф 10</li>
         </ul>
       
-        <button class="button--primary" onclick="markDone()">
-        Отметить выполненным
-        </button>
+        <button class="button--primary" onclick="markDone()">Отметить выполненным</button>
+        <button class="button--primary" onclick="addTask()">Добавить задание</button>
       </div>
     </section>
-  
-  <script>
-  function markDone() {
-    alert("Домашнее задание отмечено как выполненное");
-  }
-  </script>
-  
+    <script>
+    const homeworkList = document.querySelector('.homework');
+    
+    homeworkList.querySelectorAll('.homework__item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('done'); // переключает класс done
+      });
+    });
+    
+    function markDone() {
+      const doneItems = homeworkList.querySelectorAll('.homework__item.done');
+      if (doneItems.length === 0) {
+        alert("Вы не отметили ни одного задания");
+      } else {
+        alert(`${doneItems.length} задание(ий) отмечено как выполненное`);
+      }
+    }
+    
+    function addTask() {
+      const newTask = prompt("Введите новое задание:");
+      if (newTask) {
+        const li = document.createElement('li');
+        li.textContent = newTask;
+        li.classList.add('homework__item');
+    
+        li.addEventListener('click', () => {
+          li.classList.toggle('done');
+        });
+    
+        homeworkList.appendChild(li);
+      }
+    }
+    </script>
   </body>
 </html>
